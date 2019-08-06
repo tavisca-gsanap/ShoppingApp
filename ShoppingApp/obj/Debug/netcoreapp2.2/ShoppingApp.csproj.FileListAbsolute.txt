@@ -1,0 +1,11 @@
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\bin\Debug\netcoreapp2.2\ShoppingApp.deps.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\bin\Debug\netcoreapp2.2\ShoppingApp.runtimeconfig.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\bin\Debug\netcoreapp2.2\ShoppingApp.runtimeconfig.dev.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\bin\Debug\netcoreapp2.2\ShoppingApp.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\bin\Debug\netcoreapp2.2\ShoppingApp.pdb
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.csprojResolveAssemblyReference.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.csproj.CoreCompileInputs.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.AssemblyInfoInputs.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.AssemblyInfo.cs
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingApp\obj\Debug\netcoreapp2.2\ShoppingApp.pdb

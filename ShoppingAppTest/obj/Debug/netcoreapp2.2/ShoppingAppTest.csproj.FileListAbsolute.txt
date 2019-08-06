@@ -1,0 +1,16 @@
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingAppTest.deps.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingAppTest.runtimeconfig.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingAppTest.runtimeconfig.dev.json
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingAppTest.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingAppTest.pdb
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingApp.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\bin\Debug\netcoreapp2.2\ShoppingApp.pdb
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.csprojResolveAssemblyReference.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.csproj.CoreCompileInputs.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.AssemblyInfoInputs.cache
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.AssemblyInfo.cs
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.dll
+C:\Users\gsanap\source\repos\ShoppingApp\ShoppingAppTest\obj\Debug\netcoreapp2.2\ShoppingAppTest.pdb
