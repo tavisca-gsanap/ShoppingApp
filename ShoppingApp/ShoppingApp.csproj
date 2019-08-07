@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="OfferManager.cs" />
+    <Compile Remove="IProduct.cs" />
   </ItemGroup>
+
+
 
 </Project>

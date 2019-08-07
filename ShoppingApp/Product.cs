@@ -12,8 +12,8 @@ namespace ShoppingApp
             Price = price;
             Category = category;
         }
-        string Name { get; }
-        double Price { get; }
-        Category Category {get;}
+        public string Name { get; }
+        public double Price { get; }
+        public Category Category {get;}
     }
 }

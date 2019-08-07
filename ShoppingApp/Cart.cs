@@ -6,12 +6,12 @@ namespace ShoppingApp
 {
     public class Cart
     {
-        private Dictionary<IProduct, int> _addedProducts = new Dictionary<IProduct, int>();
-        private OfferManager _offerManager;
+        private Dictionary<Product, int> _addedProducts = new Dictionary<Product, int>();
+        private DiscountConfig _discountConfig;
 
-        public Cart(OfferManager offerManager)
+        public Cart(DiscountConfig discountConfig)
         {
-            _offerManager = offerManager;
+            _discountConfig = discountConfig;
         }
 
         public double GetTotal()
@@ -28,11 +28,11 @@ namespace ShoppingApp
             double total = 0;
             foreach (var product in _addedProducts.Keys)
             {
-                total += (product.Price * (1 - _offerManager.GetDiscount(product) / 100)) * _addedProducts[product];
+                total += (product.Price * (1 - _discountConfig.GetDiscount(product.Category) / 100)) * _addedProducts[product];
             }
             return total;
         }
-        public void AddToCart(IProduct product,int quantity)
+        public void AddProduct(Product product,int quantity)
         {
             if (_addedProducts.ContainsKey(product))
             {
@@ -41,6 +41,17 @@ namespace ShoppingApp
             else
             {
                 _addedProducts.Add(product, quantity);
+            }
+        }
+        public void RemoveProduct(Product product, int quantity)
+        {
+            if (_addedProducts.ContainsKey(product))
+            {
+                _addedProducts[product] = (_addedProducts[product] - quantity) < 0 ? 0 : (_addedProducts[product] - quantity);
+            }
+            else
+            {
+                _addedProducts.Remove(product);
             }
         }
     }
