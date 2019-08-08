@@ -4,7 +4,7 @@ using ShoppingApp;
 
 namespace ShoppingAppTest
 {
-    public class OfferManagerTest
+    public class DiscountTest
     {
         [Fact]
         public void Add_Discount_To_Category()

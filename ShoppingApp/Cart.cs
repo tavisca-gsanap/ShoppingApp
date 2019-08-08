@@ -34,24 +34,38 @@ namespace ShoppingApp
         }
         public void AddProduct(Product product,int quantity)
         {
-            if (_addedProducts.ContainsKey(product))
+            if (quantity > 0)
             {
-                _addedProducts[product] += quantity;
+                if (_addedProducts.ContainsKey(product))
+                {
+                    _addedProducts[product] += quantity;
+                }
+                else
+                {
+                    _addedProducts.Add(product, quantity);
+                }
             }
             else
             {
-                _addedProducts.Add(product, quantity);
+                throw new NotValidQuantityException("You have entered Invalid quantity");
             }
         }
         public void RemoveProduct(Product product, int quantity)
         {
-            if (_addedProducts.ContainsKey(product))
+            if (quantity > 0 && quantity <= _addedProducts[product])
             {
-                _addedProducts[product] = (_addedProducts[product] - quantity) < 0 ? 0 : (_addedProducts[product] - quantity);
+                if (_addedProducts.ContainsKey(product))
+                {
+                    _addedProducts[product] = (_addedProducts[product] - quantity) < 0 ? 0 : (_addedProducts[product] - quantity);
+                }
+                else
+                {
+                    _addedProducts.Remove(product);
+                }
             }
             else
             {
-                _addedProducts.Remove(product);
+                throw new NotValidQuantityException("You have entered Invalid quantity");
             }
         }
     }

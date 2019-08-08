@@ -6,9 +6,6 @@
     <RootNamespace>ShoppingApp</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="IProduct.cs" />
-  </ItemGroup>
 
 
 
