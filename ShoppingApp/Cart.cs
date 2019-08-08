@@ -1,36 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ShoppingApp
 {
     public class Cart
     {
         private Dictionary<Product, int> _addedProducts = new Dictionary<Product, int>();
-        private DiscountConfig _discountConfig;
+        private IDiscount _discount;
 
-        public Cart(DiscountConfig discountConfig)
+        public Cart(string discountType)
         {
-            _discountConfig = discountConfig;
+            try
+            {
+                _discount = DiscountFactory.GetDiscountType(discountType);
+            }
+            catch(InvalidDiscountTypeException) { }
         }
 
         public double GetTotal()
         {
-            double total = 0;
-            foreach(var product in _addedProducts.Keys)
-            {
-                total += product.Price * _addedProducts[product];
-            }
-            return total;
+            return _addedProducts.Keys.Select<Product, double>(x => x.Price * _addedProducts[x]).Sum();
         }
         public double GetDiscountedTotal()
         {
-            double total = 0;
-            foreach (var product in _addedProducts.Keys)
-            {
-                total += (product.Price * (1 - _discountConfig.GetDiscount(product.Category) / 100)) * _addedProducts[product];
-            }
-            return total;
+            return _discount.GetDiscountedTotal(_addedProducts); ;
         }
         public void AddProduct(Product product,int quantity)
         {

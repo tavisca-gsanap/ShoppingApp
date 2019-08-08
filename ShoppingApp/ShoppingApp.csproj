@@ -6,7 +6,8 @@
     <RootNamespace>ShoppingApp</RootNamespace>
   </PropertyGroup>
 
-
-
-
+  <ItemGroup>
+    <Compile Remove="DiscountConfig.cs" />
+  </ItemGroup>
+  
 </Project>
