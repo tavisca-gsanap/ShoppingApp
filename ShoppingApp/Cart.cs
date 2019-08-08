@@ -52,20 +52,23 @@ namespace ShoppingApp
         }
         public void RemoveProduct(Product product, int quantity)
         {
-            if (quantity > 0 && quantity <= _addedProducts[product])
+            if (_addedProducts.ContainsKey(product))
             {
-                if (_addedProducts.ContainsKey(product))
+                if (quantity > 0 && quantity <= _addedProducts[product])
                 {
-                    _addedProducts[product] = (_addedProducts[product] - quantity) < 0 ? 0 : (_addedProducts[product] - quantity);
+                    if((_addedProducts[product] - quantity) < 0)
+                        _addedProducts.Remove(product);
+                    else
+                        _addedProducts[product] = _addedProducts[product] - quantity;
                 }
                 else
                 {
-                    _addedProducts.Remove(product);
+                    throw new NotValidQuantityException("You have entered Invalid quantity");
                 }
             }
             else
             {
-                throw new NotValidQuantityException("You have entered Invalid quantity");
+                throw new ProductNotFoundException("Product Specified Not Found in Cart");
             }
         }
     }

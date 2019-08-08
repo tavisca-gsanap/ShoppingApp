@@ -11,13 +11,20 @@ namespace ShoppingApp
 
         public void SetDiscount(Category category, float dicount)
         {
-            if (_categoryDiscounts.ContainsKey(category))
+            if(dicount>=0 && dicount <= 100)
             {
-                _categoryDiscounts[category] = dicount;
+                if (_categoryDiscounts.ContainsKey(category))
+                {
+                    _categoryDiscounts[category] = dicount;
+                }
+                else
+                {
+                    _categoryDiscounts.Add(category, dicount);
+                }
             }
             else
             {
-                _categoryDiscounts.Add(category, dicount);
+                throw new NotValidDiscountException("Not a Valid Discount Percentage");
             }
         }
         public float GetDiscount(Category category)

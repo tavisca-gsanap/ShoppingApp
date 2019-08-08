@@ -35,16 +35,16 @@ namespace ShoppingAppTest
             DiscountConfig discountConfig = new DiscountConfig();
             Product product = new Product("Surface", 35000, Category.Laptop);
             Cart cart = new Cart(discountConfig);
-            string message="";
-            try
-            {
-                cart.AddProduct(product, -2);
-            }
-            catch(NotValidQuantityException exception)
-            {
-                message=exception.Message;
-            }
-            Assert.Equal("You have entered Invalid quantity", message);
+            Assert.Throws<NotValidQuantityException>(() => cart.AddProduct(product, -2));
+        }
+
+        [Fact]
+        public void Remove_Product_Which_Is_Not_Present()
+        {
+            DiscountConfig discountConfig = new DiscountConfig();
+            Product product = new Product("Surface", 35000, Category.Laptop);
+            Cart cart = new Cart(discountConfig);
+            Assert.Throws<ProductNotFoundException>(() => cart.RemoveProduct(product, 1));
         }
 
         [Fact]
@@ -53,17 +53,8 @@ namespace ShoppingAppTest
             DiscountConfig discountConfig = new DiscountConfig();
             Product product = new Product("Surface", 35000, Category.Laptop);
             Cart cart = new Cart(discountConfig);
-            string message = "";
-            try
-            {
-                cart.AddProduct(product, 3);
-                cart.RemoveProduct(product, -2);
-            }
-            catch (NotValidQuantityException exception)
-            {
-                message = exception.Message;
-            }
-            Assert.Equal("You have entered Invalid quantity", message);
+            cart.AddProduct(product, 3);
+            Assert.Throws<NotValidQuantityException>(() => cart.RemoveProduct(product, -2));
         }
 
         [Fact]
